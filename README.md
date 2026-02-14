@@ -169,3 +169,4 @@ npm start
 - Email notifications
 - Export functionality
 - Analytics dashboard
+# Innofolio
