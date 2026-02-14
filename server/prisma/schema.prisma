@@ -1,0 +1,75 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = "file:./dev.db"
+}
+
+model User {
+  id              String   @id @default(uuid())
+  email           String   @unique
+  username        String   @default("")
+  password        String
+  role            String   @default("MEMBER")
+  teamId          String?
+  team            Team?    @relation(fields: [teamId], references: [id])
+  ownedIdeas      Idea[]   @relation("IdeaOwner")
+  collaborations  Idea[]   @relation("IdeaCollaborators")
+  ownedGroups     Group[]  @relation("GroupOwner")
+  groupMemberships Group[] @relation("GroupMembers")
+  createdAt       DateTime @default(now())
+}
+
+model Team {
+  id        String   @id @default(uuid())
+  name      String
+  members   User[]
+  ideas     Idea[]
+  createdAt DateTime @default(now())
+}
+
+model Idea {
+  id              String      @id @default(uuid())
+  ideaNumber      Int
+  globalCounter   Int         @unique
+  title           String
+  description     String
+  opportunity     String      @default("")
+  tags            String      @default("")
+  visibility      String      @default("PRIVATE")
+  allowedGroupId  String?
+  allowedGroup    Group?      @relation(fields: [allowedGroupId], references: [id])
+  stageGate       String      @default("IDEA")
+  isSidelined     Boolean     @default(false)
+  ownerId         String
+  owner           User        @relation("IdeaOwner", fields: [ownerId], references: [id], onDelete: Cascade)
+  collaborators   User[]      @relation("IdeaCollaborators")
+  teamId          String?
+  team            Team?       @relation(fields: [teamId], references: [id])
+  createdAt       DateTime    @default(now())
+  updatedAt       DateTime    @updatedAt
+  
+  @@index([teamId, ideaNumber])
+  @@index([teamId, stageGate])
+  @@index([visibility])
+}
+
+model Group {
+  id          String   @id @default(uuid())
+  name        String
+  description String   @default("")
+  ownerId     String
+  owner       User     @relation("GroupOwner", fields: [ownerId], references: [id])
+  members     User[]   @relation("GroupMembers")
+  ideas       Idea[]
+  createdAt   DateTime @default(now())
+}
+
+model GlobalCounter {
+  id      String @id @default("singleton")
+  counter Int    @default(0)
+}
+
+
