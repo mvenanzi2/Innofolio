@@ -6,6 +6,11 @@ import DashboardPage from './pages/DashboardPage';
 import IdeaDetailPage from './pages/IdeaDetailPage';
 import ProfilePage from './pages/ProfilePage';
 import GroupsPage from './pages/GroupsPage';
+import GroupDetailPage from './pages/GroupDetailPage';
+import ForgotPasswordPage from './pages/ForgotPasswordPage';
+import ResetPasswordPage from './pages/ResetPasswordPage';
+import ResourcesPage from './pages/ResourcesPage';
+import StatsPage from './pages/StatsPage';
 import ProtectedRoute from './components/auth/ProtectedRoute';
 
 function App() {
@@ -15,6 +20,8 @@ function App() {
         <Routes>
           <Route path="/signup" element={<SignupPage />} />
           <Route path="/login" element={<LoginPage />} />
+          <Route path="/forgot-password" element={<ForgotPasswordPage />} />
+          <Route path="/reset-password" element={<ResetPasswordPage />} />
           <Route
             path="/dashboard"
             element={
@@ -44,6 +51,30 @@ function App() {
             element={
               <ProtectedRoute>
                 <GroupsPage />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/groups/:id"
+            element={
+              <ProtectedRoute>
+                <GroupDetailPage />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/resources"
+            element={
+              <ProtectedRoute>
+                <ResourcesPage />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/stats"
+            element={
+              <ProtectedRoute>
+                <StatsPage />
               </ProtectedRoute>
             }
           />

@@ -60,14 +60,18 @@ const LoginPage = () => {
           <div>
             <button
               type="submit"
-              className="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+              className="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
             >
               Sign in
             </button>
           </div>
-          <div className="text-center">
+          
+          <div className="flex items-center justify-between text-sm">
+            <Link to="/forgot-password" className="text-blue-600 hover:text-blue-500">
+              Forgot password?
+            </Link>
             <Link to="/signup" className="text-blue-600 hover:text-blue-500">
-              Don't have an account? Sign up
+              Sign up
             </Link>
           </div>
         </form>

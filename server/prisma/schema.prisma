@@ -8,18 +8,23 @@ datasource db {
 }
 
 model User {
-  id              String   @id @default(uuid())
-  email           String   @unique
-  username        String   @default("")
-  password        String
-  role            String   @default("MEMBER")
-  teamId          String?
-  team            Team?    @relation(fields: [teamId], references: [id])
-  ownedIdeas      Idea[]   @relation("IdeaOwner")
-  collaborations  Idea[]   @relation("IdeaCollaborators")
-  ownedGroups     Group[]  @relation("GroupOwner")
-  groupMemberships Group[] @relation("GroupMembers")
-  createdAt       DateTime @default(now())
+  id                    String             @id @default(uuid())
+  email                 String             @unique
+  username              String             @default("")
+  password              String
+  role                  String             @default("MEMBER")
+  teamId                String?
+  team                  Team?              @relation(fields: [teamId], references: [id])
+  ownedIdeas            Idea[]             @relation("IdeaOwner")
+  collaborations        Idea[]             @relation("IdeaCollaborators")
+  ownedGroups           Group[]            @relation("GroupOwner")
+  groupMemberships      Group[]            @relation("GroupMembers")
+  passwordResetTokens   PasswordResetToken[]
+  sentInvitations       GroupInvitation[]  @relation("InvitationSender")
+  receivedInvitations   GroupInvitation[]  @relation("InvitationReceiver")
+  votes                 Vote[]
+  comments              Comment[]
+  createdAt             DateTime           @default(now())
 }
 
 model Team {
@@ -48,6 +53,8 @@ model Idea {
   collaborators   User[]      @relation("IdeaCollaborators")
   teamId          String?
   team            Team?       @relation(fields: [teamId], references: [id])
+  votes           Vote[]
+  comments        Comment[]
   createdAt       DateTime    @default(now())
   updatedAt       DateTime    @updatedAt
   
@@ -57,19 +64,72 @@ model Idea {
 }
 
 model Group {
-  id          String   @id @default(uuid())
+  id          String            @id @default(uuid())
   name        String
-  description String   @default("")
+  description String            @default("")
   ownerId     String
-  owner       User     @relation("GroupOwner", fields: [ownerId], references: [id])
-  members     User[]   @relation("GroupMembers")
+  owner       User              @relation("GroupOwner", fields: [ownerId], references: [id])
+  members     User[]            @relation("GroupMembers")
   ideas       Idea[]
-  createdAt   DateTime @default(now())
+  invitations GroupInvitation[]
+  createdAt   DateTime          @default(now())
 }
 
 model GlobalCounter {
   id      String @id @default("singleton")
   counter Int    @default(0)
+}
+
+model PasswordResetToken {
+  id        String   @id @default(uuid())
+  token     String   @unique
+  userId    String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  expiresAt DateTime
+  createdAt DateTime @default(now())
+  
+  @@index([token])
+}
+
+model GroupInvitation {
+  id         String   @id @default(uuid())
+  groupId    String
+  group      Group    @relation(fields: [groupId], references: [id], onDelete: Cascade)
+  senderId   String
+  sender     User     @relation("InvitationSender", fields: [senderId], references: [id], onDelete: Cascade)
+  receiverId String
+  receiver   User     @relation("InvitationReceiver", fields: [receiverId], references: [id], onDelete: Cascade)
+  status     String   @default("PENDING") // PENDING, ACCEPTED, DECLINED
+  createdAt  DateTime @default(now())
+  
+  @@unique([groupId, receiverId])
+  @@index([receiverId, status])
+}
+
+model Vote {
+  id        String   @id @default(uuid())
+  ideaId    String
+  idea      Idea     @relation(fields: [ideaId], references: [id], onDelete: Cascade)
+  userId    String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  createdAt DateTime @default(now())
+  
+  @@unique([ideaId, userId])
+  @@index([ideaId])
+}
+
+model Comment {
+  id        String   @id @default(uuid())
+  content   String
+  ideaId    String
+  idea      Idea     @relation(fields: [ideaId], references: [id], onDelete: Cascade)
+  userId    String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  isHidden  Boolean  @default(false)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  
+  @@index([ideaId, createdAt])
 }
 
 

@@ -1,0 +1,555 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXContainerItemProxy section */
+		C9EC106E2F4135DD00222490 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C9EC10562F4135DA00222490 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C9EC105D2F4135DA00222490;
+			remoteInfo = "Innofolio Xcode";
+		};
+		C9EC10782F4135DD00222490 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C9EC10562F4135DA00222490 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C9EC105D2F4135DA00222490;
+			remoteInfo = "Innofolio Xcode";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		C9EC105E2F4135DA00222490 /* Innofolio Xcode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Innofolio Xcode.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C9EC106D2F4135DD00222490 /* Innofolio XcodeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Innofolio XcodeTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C9EC10772F4135DD00222490 /* Innofolio XcodeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Innofolio XcodeUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		C9EC10602F4135DA00222490 /* Innofolio Xcode */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "Innofolio Xcode";
+			sourceTree = "<group>";
+		};
+		C9EC10702F4135DD00222490 /* Innofolio XcodeTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "Innofolio XcodeTests";
+			sourceTree = "<group>";
+		};
+		C9EC107A2F4135DD00222490 /* Innofolio XcodeUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "Innofolio XcodeUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C9EC105B2F4135DA00222490 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C9EC106A2F4135DD00222490 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C9EC10742F4135DD00222490 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C9EC10552F4135DA00222490 = {
+			isa = PBXGroup;
+			children = (
+				C9EC10602F4135DA00222490 /* Innofolio Xcode */,
+				C9EC10702F4135DD00222490 /* Innofolio XcodeTests */,
+				C9EC107A2F4135DD00222490 /* Innofolio XcodeUITests */,
+				C9EC105F2F4135DA00222490 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C9EC105F2F4135DA00222490 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C9EC105E2F4135DA00222490 /* Innofolio Xcode.app */,
+				C9EC106D2F4135DD00222490 /* Innofolio XcodeTests.xctest */,
+				C9EC10772F4135DD00222490 /* Innofolio XcodeUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C9EC105D2F4135DA00222490 /* Innofolio Xcode */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C9EC10812F4135DD00222490 /* Build configuration list for PBXNativeTarget "Innofolio Xcode" */;
+			buildPhases = (
+				C9EC105A2F4135DA00222490 /* Sources */,
+				C9EC105B2F4135DA00222490 /* Frameworks */,
+				C9EC105C2F4135DA00222490 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				C9EC10602F4135DA00222490 /* Innofolio Xcode */,
+			);
+			name = "Innofolio Xcode";
+			packageProductDependencies = (
+			);
+			productName = "Innofolio Xcode";
+			productReference = C9EC105E2F4135DA00222490 /* Innofolio Xcode.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C9EC106C2F4135DD00222490 /* Innofolio XcodeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C9EC10842F4135DD00222490 /* Build configuration list for PBXNativeTarget "Innofolio XcodeTests" */;
+			buildPhases = (
+				C9EC10692F4135DD00222490 /* Sources */,
+				C9EC106A2F4135DD00222490 /* Frameworks */,
+				C9EC106B2F4135DD00222490 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C9EC106F2F4135DD00222490 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				C9EC10702F4135DD00222490 /* Innofolio XcodeTests */,
+			);
+			name = "Innofolio XcodeTests";
+			packageProductDependencies = (
+			);
+			productName = "Innofolio XcodeTests";
+			productReference = C9EC106D2F4135DD00222490 /* Innofolio XcodeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		C9EC10762F4135DD00222490 /* Innofolio XcodeUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C9EC10872F4135DD00222490 /* Build configuration list for PBXNativeTarget "Innofolio XcodeUITests" */;
+			buildPhases = (
+				C9EC10732F4135DD00222490 /* Sources */,
+				C9EC10742F4135DD00222490 /* Frameworks */,
+				C9EC10752F4135DD00222490 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C9EC10792F4135DD00222490 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				C9EC107A2F4135DD00222490 /* Innofolio XcodeUITests */,
+			);
+			name = "Innofolio XcodeUITests";
+			packageProductDependencies = (
+			);
+			productName = "Innofolio XcodeUITests";
+			productReference = C9EC10772F4135DD00222490 /* Innofolio XcodeUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C9EC10562F4135DA00222490 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1630;
+				LastUpgradeCheck = 1630;
+				TargetAttributes = {
+					C9EC105D2F4135DA00222490 = {
+						CreatedOnToolsVersion = 16.3;
+					};
+					C9EC106C2F4135DD00222490 = {
+						CreatedOnToolsVersion = 16.3;
+						TestTargetID = C9EC105D2F4135DA00222490;
+					};
+					C9EC10762F4135DD00222490 = {
+						CreatedOnToolsVersion = 16.3;
+						TestTargetID = C9EC105D2F4135DA00222490;
+					};
+				};
+			};
+			buildConfigurationList = C9EC10592F4135DA00222490 /* Build configuration list for PBXProject "Innofolio Xcode" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C9EC10552F4135DA00222490;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = C9EC105F2F4135DA00222490 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C9EC105D2F4135DA00222490 /* Innofolio Xcode */,
+				C9EC106C2F4135DD00222490 /* Innofolio XcodeTests */,
+				C9EC10762F4135DD00222490 /* Innofolio XcodeUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C9EC105C2F4135DA00222490 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C9EC106B2F4135DD00222490 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C9EC10752F4135DD00222490 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C9EC105A2F4135DA00222490 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C9EC10692F4135DD00222490 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C9EC10732F4135DD00222490 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C9EC106F2F4135DD00222490 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C9EC105D2F4135DA00222490 /* Innofolio Xcode */;
+			targetProxy = C9EC106E2F4135DD00222490 /* PBXContainerItemProxy */;
+		};
+		C9EC10792F4135DD00222490 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C9EC105D2F4135DA00222490 /* Innofolio Xcode */;
+			targetProxy = C9EC10782F4135DD00222490 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		C9EC107F2F4135DD00222490 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.4;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		C9EC10802F4135DD00222490 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.4;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C9EC10822F4135DD00222490 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "me.Innofolio-Xcode";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C9EC10832F4135DD00222490 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "me.Innofolio-Xcode";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		C9EC10852F4135DD00222490 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "me.Innofolio-XcodeTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Innofolio Xcode.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Innofolio Xcode";
+			};
+			name = Debug;
+		};
+		C9EC10862F4135DD00222490 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "me.Innofolio-XcodeTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Innofolio Xcode.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Innofolio Xcode";
+			};
+			name = Release;
+		};
+		C9EC10882F4135DD00222490 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "me.Innofolio-XcodeUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Innofolio Xcode";
+			};
+			name = Debug;
+		};
+		C9EC10892F4135DD00222490 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "me.Innofolio-XcodeUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Innofolio Xcode";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C9EC10592F4135DA00222490 /* Build configuration list for PBXProject "Innofolio Xcode" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C9EC107F2F4135DD00222490 /* Debug */,
+				C9EC10802F4135DD00222490 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C9EC10812F4135DD00222490 /* Build configuration list for PBXNativeTarget "Innofolio Xcode" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C9EC10822F4135DD00222490 /* Debug */,
+				C9EC10832F4135DD00222490 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C9EC10842F4135DD00222490 /* Build configuration list for PBXNativeTarget "Innofolio XcodeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C9EC10852F4135DD00222490 /* Debug */,
+				C9EC10862F4135DD00222490 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C9EC10872F4135DD00222490 /* Build configuration list for PBXNativeTarget "Innofolio XcodeUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C9EC10882F4135DD00222490 /* Debug */,
+				C9EC10892F4135DD00222490 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C9EC10562F4135DA00222490 /* Project object */;
+}

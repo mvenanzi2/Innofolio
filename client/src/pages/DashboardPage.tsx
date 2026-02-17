@@ -26,6 +26,7 @@ const DashboardPage = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [showSidelined, setShowSidelined] = useState(false);
   const [availableTags, setAvailableTags] = useState<string[]>([]);
+  const [showAskAI, setShowAskAI] = useState(false);
 
   const fetchIdeas = async () => {
     try {
@@ -150,12 +151,30 @@ const DashboardPage = () => {
                     </button>
                     <button
                       onClick={() => {
+                        navigate('/stats');
+                        setShowSettingsMenu(false);
+                      }}
+                      className="block w-full text-left px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-50 transition-colors"
+                    >
+                      Stats & Achievements
+                    </button>
+                    <button
+                      onClick={() => {
                         navigate('/groups');
                         setShowSettingsMenu(false);
                       }}
                       className="block w-full text-left px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-50 transition-colors"
                     >
                       Manage Groups
+                    </button>
+                    <button
+                      onClick={() => {
+                        navigate('/resources');
+                        setShowSettingsMenu(false);
+                      }}
+                      className="block w-full text-left px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-50 transition-colors"
+                    >
+                      Resources
                     </button>
                     <div className="border-t border-gray-100 my-1"></div>
                     <button
@@ -205,15 +224,26 @@ const DashboardPage = () => {
               )}
             </button>
           </div>
-          <button
-            onClick={() => setShowCreateModal(true)}
-            className="px-6 py-2.5 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-xl hover:shadow-lg hover:scale-105 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all duration-200 font-medium flex items-center gap-2"
-          >
-            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" />
-            </svg>
-            New Idea
-          </button>
+          <div className="flex items-center gap-3">
+            <button
+              onClick={() => setShowAskAI(true)}
+              className="px-4 py-2.5 bg-white border border-gray-200 rounded-xl hover:shadow-sm focus:outline-none focus:ring-2 focus:ring-purple-500 flex items-center gap-2 transition-all"
+            >
+              <svg className="w-5 h-5 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+              </svg>
+              <span className="text-gray-700 font-medium hidden sm:inline">Ask AI</span>
+            </button>
+            <button
+              onClick={() => setShowCreateModal(true)}
+              className="px-6 py-2.5 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-xl hover:shadow-lg hover:scale-105 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all duration-200 font-medium flex items-center gap-2"
+            >
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" />
+              </svg>
+              New Idea
+            </button>
+          </div>
         </div>
 
         {ideas.length === 0 ? (
@@ -409,6 +439,31 @@ const DashboardPage = () => {
                 Apply
               </button>
             </div>
+          </div>
+        </div>
+      )}
+
+      {/* Ask AI Modal */}
+      {showAskAI && (
+        <div className="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center p-4 z-50">
+          <div className="bg-white rounded-2xl p-8 max-w-md w-full shadow-2xl text-center">
+            <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br from-purple-100 to-blue-100 mb-4">
+              <svg className="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+              </svg>
+            </div>
+            <h2 className="text-2xl font-bold mb-3 bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">
+              AI Assistant
+            </h2>
+            <p className="text-gray-600 mb-6">
+              Our AI-powered assistant is coming soon! It will help you brainstorm, refine ideas, and provide insights.
+            </p>
+            <button
+              onClick={() => setShowAskAI(false)}
+              className="px-6 py-3 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-xl hover:shadow-lg transition-all font-medium"
+            >
+              Got it!
+            </button>
           </div>
         </div>
       )}

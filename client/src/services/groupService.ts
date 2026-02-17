@@ -35,4 +35,13 @@ export const groupService = {
     const response = await api.delete<Group>(`/groups/${groupId}/members/${userId}`);
     return response.data;
   },
+
+  inviteMemberByUsername: async (groupId: string, username: string): Promise<any> => {
+    const response = await api.post(`/groups/${groupId}/invite`, { username });
+    return response.data;
+  },
+
+  respondToInvitation: async (invitationId: string, accept: boolean): Promise<void> => {
+    await api.post(`/groups/invitations/${invitationId}/respond`, { accept });
+  },
 };
