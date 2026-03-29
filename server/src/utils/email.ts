@@ -2,8 +2,9 @@
 // In production, integrate with SendGrid, AWS SES, or similar service
 
 export const sendPasswordResetEmail = async (email: string, resetToken: string) => {
-  // For development, just log the reset link
-  const resetLink = `http://localhost:5173/reset-password?token=${resetToken}`;
+  // Get frontend URL from environment variable
+  const frontendUrl = process.env.FRONTEND_URL || 'http://localhost:5173';
+  const resetLink = `${frontendUrl}/reset-password?token=${resetToken}`;
   
   console.log('\n=================================');
   console.log('PASSWORD RESET EMAIL');
@@ -16,7 +17,7 @@ export const sendPasswordResetEmail = async (email: string, resetToken: string) 
   // Example with SendGrid:
   // await sgMail.send({
   //   to: email,
-  //   from: 'noreply@innofolio.com',
+  //   from: 'noreply@innofolio.app',
   //   subject: 'Reset Your Password',
   //   html: `Click <a href="${resetLink}">here</a> to reset your password.`
   // });

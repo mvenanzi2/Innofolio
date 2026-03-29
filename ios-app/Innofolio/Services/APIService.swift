@@ -3,7 +3,9 @@ import Foundation
 class APIService {
     static let shared = APIService()
     
-    // TODO: Replace with your deployed backend URL
+    // TODO: Update this to your production backend URL when deploying
+    // For local development: "http://localhost:3000/api"
+    // For production: "https://api.innofolio.app"
     private let baseURL = "http://localhost:3000/api"
     
     private var token: String? {
